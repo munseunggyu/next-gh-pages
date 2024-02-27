@@ -3,7 +3,7 @@ name: GitHub Pages Deploy
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   build-and-deploy:
@@ -14,8 +14,8 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          yarn install
-          yarn build && touch ./out/.nojekyll
+          npm install
+          npm build && touch ./out/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
